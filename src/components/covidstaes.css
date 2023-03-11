@@ -1,0 +1,58 @@
+:root {
+    --background-color: #e0e1ec;
+    --Heading-color: #6323cc;
+    --Sub-background: #d6c2ee;
+    --paragraph-color: #72697c;
+    --heading:36px;
+    --subheading:28px;
+    --para:16px;
+  }
+.covid-states{
+    background-color: var(--Sub-background) ;
+
+margin-top:6%;
+border-radius: 150px 150px 0px 0px;}
+
+.co-heading{
+    font-weight: 800;
+    font-size: var(--heading);
+  text-align:left;
+  padding:20px 0 20px 0;
+    color: #6323cc;
+}
+.cov-heading{
+    font-weight: 700;
+    font-size: var(--subheading);
+    text-align: left;
+    color: #6323cc;  
+}
+.co-img{
+    text-align: right;
+}
+.data-item{
+    text-align: center;
+    justify-content: center;
+}
+
+.data{
+    background: #C5D7FF;
+border-radius: 50px;
+padding: 10px;
+margin:10px;
+
+
+}
+.covi-heading{
+    font-weight: 700;
+    font-size: var(--subheading);
+    text-align: center;
+    color: #6323cc; 
+
+}
+.para-a{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+  
+    color: #686868;
+  }

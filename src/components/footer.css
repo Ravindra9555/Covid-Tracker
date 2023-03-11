@@ -1,0 +1,28 @@
+.image-pro{
+background-color: white;
+border-radius: 100%;
+}
+.rounded-start-a{
+    border-radius: 150%;
+}
+.footer{
+    margin-top:5%;
+    background-color:#d6c2ee;
+}
+.card{
+    background-color: #d6c2ee;
+
+border:none ;
+padding: 10px;}
+.dev-heading{
+    color:#6323cc ;
+    font-size: 28px;
+    font-weight: 600;
+
+}
+.para-a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}

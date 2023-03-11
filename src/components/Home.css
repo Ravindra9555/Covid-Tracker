@@ -1,0 +1,88 @@
+:root {
+  --background-color: #e0e1ec;
+  --Heading-color: #6323cc;
+  --Sub-background: #d6c2ee;
+  --paragraph-color: #72697c;
+  --heading:36px;
+  --subheading:28px;
+  --para:16px;
+}
+body {
+    margin: 0;
+    padding:0;
+
+  background-color: var(--background-color);
+}
+.home-body {
+  background-color: var(--background-color);
+}
+.navbar {
+  background-color: var(--Sub-background);
+}
+
+.nav-link {
+  padding-left: 20vh;
+  font-weight: 600;
+  font-size: var(--subheading);
+ 
+  color: #6323cc;
+
+}
+.logo {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 82px;
+
+  color: #6323cc;
+}
+.home-frame {
+  height: 99%;
+  background: #d6c2ee;
+  border-radius: 0px 0px 400px 0px;
+}
+.covid{
+    padding:100px;
+}
+.home-image {
+  width: 100%;
+
+  margin-left: 10px;
+}
+.h1-heading {
+  font-weight: 800;
+  font-size: var(--heading);
+text-align: left;
+padding:20px 0 20px 0;
+  color: #6323cc;
+
+}
+.h3-heading {
+ 
+  font-weight: 700;
+  font-size: var(--subheading);
+  line-height: 48px;
+  text-align: left;
+  color: #6323cc;
+}
+.para {
+  font-weight: 600;
+  font-size: var(--para);
+  text-align: left;
+
+  color: #686868;
+}
+.pre-button {
+  background: #6323cc;
+  border-radius: 15px;
+  justify-content: start;
+ 
+  position: absolute;
+  left:100px;
+}
+.link-prevent{
+    text-decoration: none;
+    color: white;
+    font-size: var(--para);
+    font-weight: 600;
+
+}
