@@ -9,7 +9,7 @@ const Whatcorona = () => {
     <div className="what" id="about">
       <div className="row">
         <div className=" col-sm-6 whatImg">
-          <img className="corona-image" src={what}  />
+          <img className="corona-image" alt="this is what" src={what}/>
         </div>
         <div className=" col-sm-5 whatText">
           <h3 className="h3-heading">What is Corona Viruses?</h3>
@@ -61,12 +61,12 @@ const Whatcorona = () => {
                 <li>Headache</li>
                 <li>New loss of taste or smell</li>
                 <li>Sore throat</li>
-                <li>Congestion or runny nose</li>>
+                <li>Congestion or runny nose</li>
               </ul>
             </p>
           </div>
           <div className=" col-sm-4 whatImg">
-            <img className="corona-image" src={symp}  />
+            <img className="corona-image" alt="this is sysm" src={symp} />
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ const Whatcorona = () => {
             </p>
           </div>
           <div className="col-sm-4">
-            <img className="doc-img" src={pre} />
+            <img className="doc-img"  alt="this is fix" src={pre} />
           </div>
         </div>
       </div>
