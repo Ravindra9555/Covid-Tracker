@@ -4,9 +4,9 @@ import doctor from "./assets/doctors.png";
 
 const Home = () => {
   return (
-    <div className=" home-body">
-      <nav className="navbar navbar-expand">
-        <div className="container-fluid">
+    <div className="home-body">
+      <nav className="navbar mainnav navbar-expand-lg body-tertiary">
+        <div className="container-fluid mainnav">
           <a className="navbar-brand logo" href="/">
             Covid19.
           </a>

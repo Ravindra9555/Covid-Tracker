@@ -16,7 +16,7 @@ body {
 .home-body {
   background-color: var(--background-color);
 }
-.navbar {
+.mainnav {
   background-color: var(--Sub-background);
 }
 
