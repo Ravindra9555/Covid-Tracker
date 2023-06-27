@@ -3,51 +3,45 @@ import { useState, useEffect } from "react";
 import covImg from "./assets/coImg.png";
 import "./covidstaes.css";
 
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
-    "X-RapidAPI-Host": process.env.REACT_APP_HOST_API,
-  },
-};
 
 const Covidstates = () => {
   const [data, setData] = useState([]);
+  
+  
+    const fetchData = async () => {
+    const url = 'https://covid-19-statistics.p.rapidapi.com/reports/total?date=2020-04-07';
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'bd65decf96msha6db61ea8d22351p1c77f1jsn7d2b322ca022',
+        'X-RapidAPI-Host': 'covid-19-statistics.p.rapidapi.com'
+      }
+     
 
-  const Getdata = async () => {
-    //  fetch(
-    //  "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/world",
-    //   options
-    // )
-    //     .then((response) => response.json())
-    //   // .then(response => console.log(response))
-    //   .then((response) => setData(response))
-    //     .catch((err) => console.error(err));
+    };
+    
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+    
+      
+      setData(result.data);
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+  } 
 
-    //or we can fetch throurg await
-    const response = await fetch(
-      "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/world",
-      options
-    );
-    setData(await response.json());
-  };
   useEffect(() => {
-    // fetch(
-    //   "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/world",
-    //   options
-    // )
-    //   .then((response) => response.json())
-    // // .then(response => console.log(response))
-    // .then((response) => setData(response))
-    //   .catch((err) => console.error(err));
-    // or we can call api with this function
 
-    Getdata();
-  }, []);
+    fetchData();
+  }, []
+);
+
   return (
     <div>
-      {data.map((curr) => {
-        return (
+    
+        
           <div className="covid-states" id="covid-states">
             <div className="row">
               <div className=" col-sm-4 co-img">
@@ -65,24 +59,24 @@ const Covidstates = () => {
             <div className="row data-item">
               <div className="col-sm-2 data">
                 <h3 className="covi-heading">ActiveCases</h3>
-                <p className="para-a"> {curr.ActiveCases}</p>
+                <p className="para-a"> {data.active}</p>
               </div>
               <div className="col-sm-2 data">
                 <h3 className="covi-heading">Total Recovered</h3>
-                <p className="para-a">{data[0].TotalRecovered}</p>
+                <p className="para-a">{data.recovered}</p>
               </div>
               <div className="col-sm-2 data">
-                <h3 className="covi-heading">Total Cases</h3>
-                <p className="para-a">{data[0].TotalCases}</p>
+                <h3 className="covi-heading">Total Deaths</h3>
+                <p className="para-a">{data.deaths}</p>
               </div>
               <div className="col-sm-2 data">
-                <h3 className="covi-heading"> Total Deaths</h3>
-                <p className="para-a">{data[0].TotalDeaths}</p>
+                <h3 className="covi-heading"> Last Updated </h3>
+                <p className="para-a">{data.last_update}</p>
               </div>
             </div>
           </div>
-        );
-      })}
+        
+    
     </div>
   );
 };

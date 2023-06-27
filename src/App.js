@@ -10,7 +10,7 @@ const App = () => {
     <>
     <div className='App'>
       <Home/>
-    <Covidstates/> 
+      <Covidstates/> 
     <Whatcorona/>
     <Footer/>
   
